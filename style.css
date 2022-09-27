@@ -1,3 +1,4 @@
+
 button {
     font-size: 25px;
     color: blueviolet;
@@ -6,13 +7,31 @@ button {
 }
 
 .catalog {
+=======
+.cart-button {
+    width: 150px;
+    height: 50px;
+}
+
+button {
+    font-size: 25px;
+    color: blueviolet;
+    margin: 20px;
+}
+
+.goods-list {
+
     display: flex;
     justify-content: space-between;
     margin-left: 20px;
     margin-right: 20px;
 }
 
+
 .product-card {
+=======
+.goods-item {
+
     width: 200px;
     height: 150px;
     border: 1px solid #A4A4A4;
@@ -20,9 +39,15 @@ button {
     padding: 20px;
     text-align: center;
     font-size: 20px;
+
     margin: 20px;
 }
 
 .catalog__product-heading:hover {
+=======
+}
+
+.goods-item:hover {
+
     color: blueviolet;
 }
