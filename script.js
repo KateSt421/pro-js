@@ -4,13 +4,13 @@ class GoodsItem {
         this.price = price;
     }
     render() {
-        return `<div
-            class="goods-item"><h3>${this.title}</h3><p>${this.price}</p></div>
-            `;
+        return `<div class="goods-item">
+            <h3>${this.title}</h3>
+            <p>${this.price}</p>
+            <button>Купить</button>
+            </div>`;
     }
 };
-
-
 
 class GoodsList {
     constructor() {
@@ -32,7 +32,7 @@ class GoodsList {
         });
         document.querySelector('.goods-list').innerHTML = listHtml;
     }
-    getAllPrice() { // 2. Добавьте для GoodsList метод, определяющий суммарную стоимость всех товаров.
+    getAllPrice() {
         let allPrice = null;
         this.goods.forEach(item => {
 
@@ -47,13 +47,7 @@ class GoodsList {
 const list = new GoodsList();
 list.fetchGoods();
 list.render();
-list.getAllPrice(); // 2. Добавьте для GoodsList метод, определяющий суммарную стоимость всех товаров.
-
-
-/*
-    1. Добавьте пустые классы для Корзины товаров и Элемента корзины товаров.
-       Продумайте,какие методы понадобятся для работы с этими сущностями. 
-*/
+list.getAllPrice();
 
 class productBasket {
     constructor(productList) {
@@ -66,13 +60,11 @@ class productBasket {
 };
 
 class productCard {
-    constructor(price, count, img, title, description, rating) {
+    constructor(price, count, img, title) {
         this.price = price
         this.count = count
         this.img = img
         this.title = title
-        this.description = description
-        this.rating = rating
     }
     renderProduct() {
 
